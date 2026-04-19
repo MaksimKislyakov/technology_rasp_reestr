@@ -1,6 +1,7 @@
 import TokenComponent from "./tokenComponent";
 import TransactionComponent from "./transactionComponent";
 import WalletComponent from "./walletComponent";
+import Erc20Component from "./erc20Component";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
         <WalletComponent />
         <TransactionComponent />
         <TokenComponent />
+        <Erc20Component /> {}
       </div>
     </main>
   );
