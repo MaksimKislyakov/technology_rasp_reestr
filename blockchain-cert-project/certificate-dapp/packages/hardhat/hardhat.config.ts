@@ -26,7 +26,7 @@ const config: HardhatUserConfig = {
   solidity: {
     compilers: [
       {
-        version: "0.8.30",
+        version: "0.8.19",
         settings: {
           optimizer: {
             enabled: true,
@@ -52,6 +52,8 @@ const config: HardhatUserConfig = {
         url: `https://eth-mainnet.alchemyapi.io/v2/${providerApiKey}`,
         enabled: process.env.MAINNET_FORKING_ENABLED === "true",
       },
+      blockGasLimit: 30000000,
+      allowUnlimitedContractSize: true,
     },
     mainnet: {
       url: "https://mainnet.rpc.buidlguidl.com",
