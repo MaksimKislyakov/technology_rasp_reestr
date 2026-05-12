@@ -4,6 +4,150 @@
  */
 import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 
-const deployedContracts = {} as const;
+const deployedContracts = {
+  31337: {
+    CertificateRegistry: {
+      address: "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      abi: [
+        {
+          inputs: [],
+          stateMutability: "nonpayable",
+          type: "constructor",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: true,
+              internalType: "uint256",
+              name: "certId",
+              type: "uint256",
+            },
+            {
+              indexed: false,
+              internalType: "string",
+              name: "studentName",
+              type: "string",
+            },
+            {
+              indexed: false,
+              internalType: "string",
+              name: "courseName",
+              type: "string",
+            },
+          ],
+          name: "CertificateIssued",
+          type: "event",
+        },
+        {
+          inputs: [],
+          name: "admin",
+          outputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          name: "certificates",
+          outputs: [
+            {
+              internalType: "string",
+              name: "studentName",
+              type: "string",
+            },
+            {
+              internalType: "string",
+              name: "courseName",
+              type: "string",
+            },
+            {
+              internalType: "uint256",
+              name: "issueDate",
+              type: "uint256",
+            },
+            {
+              internalType: "bool",
+              name: "isIssued",
+              type: "bool",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "_certId",
+              type: "uint256",
+            },
+            {
+              internalType: "string",
+              name: "_studentName",
+              type: "string",
+            },
+            {
+              internalType: "string",
+              name: "_courseName",
+              type: "string",
+            },
+          ],
+          name: "issueCertificate",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "_certId",
+              type: "uint256",
+            },
+          ],
+          name: "verifyCertificate",
+          outputs: [
+            {
+              internalType: "string",
+              name: "studentName",
+              type: "string",
+            },
+            {
+              internalType: "string",
+              name: "courseName",
+              type: "string",
+            },
+            {
+              internalType: "uint256",
+              name: "issueDate",
+              type: "uint256",
+            },
+            {
+              internalType: "bool",
+              name: "isIssued",
+              type: "bool",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+      ],
+      inheritedFunctions: {},
+      deployedOnBlock: 1,
+    },
+  },
+} as const;
 
 export default deployedContracts satisfies GenericContractsDeclaration;
